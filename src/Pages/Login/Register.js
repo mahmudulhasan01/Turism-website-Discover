@@ -2,14 +2,15 @@ import {
   Alert,
   Box,
   Button,
-  CircularProgress,
+  // CircularProgress,
   Container,
   Grid,
   TextField,
 } from "@mui/material";
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import useFirebase from "../../Hooks/useFirebase";
+import Footer from "../Shared/Footer";
 import Navbar from "../Shared/Navbar";
 
 const Register = () => {
@@ -19,7 +20,7 @@ const Register = () => {
     user,
     registerUsingEmailPassword,
     loginUsingGoogle,
-    isLoading,
+    // isLoading,
     // authError,
   } = useFirebase();
 
@@ -121,15 +122,18 @@ const Register = () => {
             onClick={loginUsingGoogle}
             className="bg-dark rounded p-1 px-3 me-4 btn"
           >
-            <i className="fab fa-google text-warning fs-3"></i>
+            <i className="fab fa-github text-warning fs-3"></i>
           </button>
           <button
             onClick={loginUsingGoogle}
             className="bg-dark rounded p-1 px-3 me-4 btn"
           >
-            <i className="fab fa-google text-warning fs-3"></i>
+            <i className="fab  fa-facebook-f text-warning fs-3"></i>
           </button>
         </Box>
+      </div>
+      <div className="mt-5 ">
+        <Footer></Footer>
       </div>
     </Box>
   );

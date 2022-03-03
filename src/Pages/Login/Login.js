@@ -105,13 +105,13 @@ const Login = () => {
             onClick={handleGoogleLogin}
             className="bg-dark rounded p-1 px-3 me-4 btn"
           >
-            <i className="fab fa-google text-warning fs-3"></i>
+            <i className="fab fa-github text-warning fs-3"></i>
           </button>
           <button
             onClick={handleGoogleLogin}
             className="bg-dark rounded p-1 px-3 me-4 btn"
           >
-            <i className="fab fa-google text-warning fs-3"></i>
+            <i className="fab  fa-facebook-f text-warning fs-3"></i>
           </button>
         </Box>
       </div>
