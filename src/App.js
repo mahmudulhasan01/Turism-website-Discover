@@ -8,21 +8,22 @@ import {
   // useParams,
 } from "react-router-dom";
 import Home from "./Pages/Home/Home";
+import Login from "./Pages/Login/Login";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/home">
+          <Route exact path="/home">
             <Home />
           </Route>
-          {/* <Route path="/">
-            <Home />
-          </Route> */}
+          <Route exact path="/login">
+            <Login />
+          </Route>
         </Switch>
       </Router>
     </div>
