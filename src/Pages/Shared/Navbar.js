@@ -30,7 +30,7 @@ const Navbar = () => {
             component="div"
             sx={{ flexGrow: 1, fontWeight: "bold" }}
           >
-            RENT YOUR HOME
+            Discover World
           </Typography>
           <NavLink
             style={{

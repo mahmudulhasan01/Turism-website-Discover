@@ -7,9 +7,6 @@ import Banner from "./Banner/Banner";
 import Services from "./Services/Services";
 
 const Home = () => {
-  const { user } = useFirebase;
-  console.log(user);
-
   return (
     <div>
       <Navbar></Navbar>

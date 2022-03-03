@@ -11,17 +11,6 @@ import {
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializefirebase from "../Firebase/Firebase.init";
-// import {
-//   getAuth,
-//   GoogleAuthProvider,
-//   createUserWithEmailAndPassword,
-//   updateProfile,
-//   signInWithEmailAndPassword,
-//   signInWithPopup,
-//   onAuthStateChanged,
-//   getIdToken,
-//   signOut,
-// } from "firebase/auth";
 
 initializefirebase();
 
@@ -75,7 +64,6 @@ const useFirebase = () => {
 
   const singInUseingGoogle = () => {
     setIsLoading(true);
-
     return signInWithPopup(auth, googleProvider)
       .then((result) => {
         const user = result.user;
