@@ -1,16 +1,27 @@
-import { useEffect, useState } from "react";
-import initializefirebase from "../Firebase/Firebase.init";
 import {
-  getAuth,
-  GoogleAuthProvider,
   createUserWithEmailAndPassword,
-  updateProfile,
+  getAuth,
+  getIdToken,
+  GoogleAuthProvider,
+  onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
-  onAuthStateChanged,
-  getIdToken,
   signOut,
+  updateProfile,
 } from "firebase/auth";
+import { useEffect, useState } from "react";
+import initializefirebase from "../Firebase/Firebase.init";
+// import {
+//   getAuth,
+//   GoogleAuthProvider,
+//   createUserWithEmailAndPassword,
+//   updateProfile,
+//   signInWithEmailAndPassword,
+//   signInWithPopup,
+//   onAuthStateChanged,
+//   getIdToken,
+//   signOut,
+// } from "firebase/auth";
 
 initializefirebase();
 
@@ -121,6 +132,16 @@ const useFirebase = () => {
         // An error happened.
       });
   };
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user);
+        console.log(user);
+      } else {
+      }
+    });
+  }, [auth]);
 
   return {
     user,

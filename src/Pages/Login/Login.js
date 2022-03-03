@@ -86,7 +86,7 @@ const Login = () => {
                   <Button variant="text">New User? Please Register</Button>
                 </NavLink>
 
-                {isLoading && <CircularProgress />}
+                {/* {isLoading && <CircularProgress />} */}
                 {user?.email && (
                   <Alert severity="success">Login successfully!</Alert>
                 )}
