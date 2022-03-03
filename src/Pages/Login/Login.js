@@ -11,12 +11,13 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import useAuth from "../../Hooks/useAuth";
+import useFirebase from "../../Hooks/useFirebase";
+// import useAuth from "../../Hooks/useAuth";
 import Navbar from "../Shared/Navbar";
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
-  const { user, isLoading, loginUser, singInUseingGoogle } = useAuth();
+  const { user, isLoading, loginUser, singInUseingGoogle } = useFirebase();
 
   const location = useLocation();
   const history = useHistory();
@@ -84,10 +85,12 @@ const Login = () => {
                 <NavLink style={{ textDecoration: "none" }} to="/register">
                   <Button variant="text">New User? Please Register</Button>
                 </NavLink>
+
                 {isLoading && <CircularProgress />}
                 {user?.email && (
                   <Alert severity="success">Login successfully!</Alert>
                 )}
+
                 {/* {authError && <Alert severity="error">{authError}</Alert>} */}
               </form>
             </Grid>

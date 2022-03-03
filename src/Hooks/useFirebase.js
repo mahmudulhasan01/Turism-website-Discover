@@ -76,7 +76,7 @@ const useFirebase = () => {
   //   Ovserve User
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      // isLoading(true);
+      isLoading(true);
       if (user) {
         setUser(user);
         getIdToken(user).then((idToken) => {
@@ -94,7 +94,7 @@ const useFirebase = () => {
     const user = { email: email, displayName: displayName };
     console.log(user);
 
-    fetch("https://blooming-cove-73809.herokuapp.com/users", {
+    fetch("http://localhost:5000/users", {
       method: method,
       headers: {
         "content-type": "application/json",
@@ -104,7 +104,7 @@ const useFirebase = () => {
   };
 
   useEffect(() => {
-    fetch(`https://blooming-cove-73809.herokuapp.com/users/${user.email}`)
+    fetch(`http://localhost:5000/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setAdmin(data.admin);
