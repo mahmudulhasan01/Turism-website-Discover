@@ -10,6 +10,7 @@ import {
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Login/Register";
+import PlaceDetails from "./Pages/PlaceDetail/PlaceDetails";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route exact path="/home">
             <Home />
+          </Route>
+          <Route exact path="/placedetails">
+            <PlaceDetails />
           </Route>
           <Route exact path="/login">
             <Login />
