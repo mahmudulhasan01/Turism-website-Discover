@@ -4,6 +4,7 @@ import useFirebase from "../../Hooks/useFirebase";
 import Footer from "../Shared/Footer";
 import Navbar from "../Shared/Navbar";
 import Banner from "./Banner/Banner";
+import ServiceBannar from "./ServiceBannar/ServiceBannar";
 import Services from "./Services/Services";
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <Banner></Banner>
 
       <Services></Services>
+      <ServiceBannar></ServiceBannar>
 
       <h3>This is Home</h3>
       <Footer></Footer>

@@ -28,7 +28,7 @@ const Service = () => {
             Book Now
           </Button>
           <Button style={{ fontWeight: 700 }} size="small">
-            Learn More
+            Details
           </Button>
         </CardActions>
       </Card>
