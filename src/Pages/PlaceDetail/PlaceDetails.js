@@ -51,7 +51,7 @@ const PlaceDetails = () => {
               voluptatem accusamus asperiores debitis? Adventures may be
               activities with some
             </p>
-            {/* ------------------------------------------------------------------------- */}
+            {/* --------------------TABLE-START-------------------------------- */}
             <div className="">
               <TableContainer
                 sx={{ minWidth: 250, maxWidth: 350 }}
@@ -75,7 +75,25 @@ const PlaceDetails = () => {
                 </Table>
               </TableContainer>
             </div>
-            {/* --------------------------------------------------------------- */}
+            {/* --------------------TABLE--END-------------------------------- */}
+
+            {/* -----------Rating--START-------------- */}
+            <div className="mt-5">
+              <div className="">
+                <p className="fs-1 fw-bold">Rating</p>
+              </div>
+
+              <div className="">
+                <img
+                  className="img-fulid"
+                  src="https://i.ibb.co/PYw4Vxb/Screenshot-2021-10-31-174454.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            {/* -----------Rating--END-------------- */}
+
+            {/* --------------------------GALAREY--START-------------- */}
             <div className="mt-5">
               <h1>From Our Gallery</h1>
               <h6 className="text-danger">
