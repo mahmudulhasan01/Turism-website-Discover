@@ -48,9 +48,9 @@ const Navbar = () => {
               color: "white",
               fontWeight: "700px",
             }}
-            to="/explore"
+            to="/services"
           >
-            <Button color="inherit">Explore</Button>
+            <Button color="inherit">All Destintions</Button>
           </NavLink>
 
           {user?.email && (
@@ -60,9 +60,9 @@ const Navbar = () => {
                 color: "white",
                 fontWeight: "700px",
               }}
-              to="/dashboard"
+              to="/mybooking"
             >
-              <Button color="inherit">Dashboard</Button>
+              <Button color="inherit">My Booking</Button>
             </NavLink>
           )}
 

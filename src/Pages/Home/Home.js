@@ -16,7 +16,7 @@ const Home = () => {
       <Services></Services>
       <ServiceBannar></ServiceBannar>
 
-      <h3>This is Home</h3>
+      {/* <h3>This is Home</h3> */}
       <Footer></Footer>
     </div>
   );

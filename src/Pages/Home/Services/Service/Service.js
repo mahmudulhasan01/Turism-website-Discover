@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   CardActions,
@@ -7,32 +8,40 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Service = () => {
+const Service = ({ place }) => {
   return (
-    <div>
+    <Box>
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
           component="img"
           alt="green iguana"
           //   height="140"
-          image="https://i.ibb.co/yPGLDXW/coxbazar-sq-1-png.jpg"
+          image={place.img}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Cox's Bazar
+          <Typography
+            style={{ fontWeight: "bold" }}
+            gutterBottom
+            variant="h5"
+            component="div"
+          >
+            {place.name}
           </Typography>
         </CardContent>
         <CardActions>
           <Button style={{ fontWeight: 700 }} size="small">
             Book Now
           </Button>
-          <Button style={{ fontWeight: 700 }} size="small">
-            Details
-          </Button>
+          <Link to={`/places/:${place._id}`} className="text-decoration-none">
+            <Button style={{ fontWeight: 700 }} size="small">
+              Details
+            </Button>
+          </Link>
         </CardActions>
       </Card>
-    </div>
+    </Box>
   );
 };
 

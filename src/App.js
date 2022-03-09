@@ -11,6 +11,8 @@ import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Login/Register";
 import PlaceDetails from "./Pages/PlaceDetail/PlaceDetails";
+import AllServices from "./Pages/AllServices/AllServices";
+import MyBooking from "./Pages/MyBooking/MyBooking";
 
 function App() {
   return (
@@ -25,6 +27,12 @@ function App() {
           </Route>
           <Route exact path="/placedetails">
             <PlaceDetails />
+          </Route>
+          <Route exact path="/services">
+            <AllServices />
+          </Route>
+          <Route exact path="/mybooking">
+            <MyBooking />
           </Route>
           <Route exact path="/login">
             <Login />

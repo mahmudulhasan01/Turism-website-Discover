@@ -46,12 +46,12 @@ const BookingModel = () => {
               required
             />
 
-            <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">
+            <div className="mb-3">
+              <label for="exampleFormControlTextarea1" className="form-label">
                 Massage
               </label>
               <textarea
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlTextarea1"
                 rows="3"
               ></textarea>

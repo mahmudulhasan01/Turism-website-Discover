@@ -25,8 +25,11 @@ const ServiceBannar = () => {
                 interactive exhibits, the Reiman Aquarium, educational labs and
                 programs, and other exciting activities.
               </p>
-              <Link>
-                <button type="button" class="btn btn-danger text-start fw-bold">
+              <Link to={"/alllocation"}>
+                <button
+                  type="button"
+                  className="btn btn-danger text-start fw-bold"
+                >
                   Our All Location
                 </button>
               </Link>
